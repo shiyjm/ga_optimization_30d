@@ -1,0 +1,46 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{amsmath}
+
+\title{Performance of Genetic Algorithm on 30-Dimensional Benchmark Functions}
+\author{Antigravity Agent}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper demonstrates the optimization of 30-dimensional Rastrigin and Rosenbrock functions using a carefully implemented Genetic Algorithm (GA). The optimization robustness is evaluated over multiple independent runs. Experimental results reveal the convergence behaviors and the solution quality.
+\end{abstract}
+
+\section{Introduction}
+
+Genetic Algorithm (GA) is a prominent metaheuristic approach. This work applies a robust continuous GA to the 30-dimensional Rastrigin and Rosenbrock functions, presenting detailed statistical results.
+
+\section{Methodology}
+
+The GA implementation utilizes a population size of 100, maximum generation of 500, tournament selection, arithmetic crossover, and Gaussian mutation. 
+
+\section{Results}
+
+The convergence curves for both functions are illustrated in Figure~\ref{fig:convergence}. As indicated by the log-scale fitness, the algorithm effectively minimizes the objective values.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/convergence_plot.pdf}
+    \caption{Mean convergence curves of the Genetic Algorithm on 30D Rastrigin and Rosenbrock functions across multiple runs.}
+    \label{fig:convergence}
+\end{figure}
+
+The statistical results, including the best, mean, and standard deviation of the fitness values over multiple runs, are summarized in Table~\ref{tab:results}.
+
+\input{tables/results_table.tex}
+
+\section{Conclusion}
+
+The empirical evaluation confirms that the implemented GA possesses strong capability in identifying high-quality solutions for complex 30-dimensional optimization problems.
+
+\end{document}
